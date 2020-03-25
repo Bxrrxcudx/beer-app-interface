@@ -7,7 +7,11 @@ function App() {
   const [page, setPage] = useState(1)
 
   const increaseCounter = () => setPage(page + 1);
-  const descreaseCounter = () => setPage(page - 1);
+  const descreaseCounter = () => {
+    if (page > 1) {
+      setPage(page - 1)
+    }
+  };
 
   return (
     <div className="App">
